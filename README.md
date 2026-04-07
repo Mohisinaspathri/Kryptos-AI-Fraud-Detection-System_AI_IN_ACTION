@@ -19,10 +19,10 @@ We built a machine learning model using *Random Forest* that:
 
 
 
-- 🔢 *Fraud Risk Score (0–100)*
-- 🟢🟡🔴 *Risk Classification (Low / Medium / High)*
-- 🧠 *Explainable AI (Reasons for prediction)*
-- 💳 *User-friendly Input Interface*
-- ⚡ *Real-time Fraud Detection (Streamlit App)*
-- 🏪 *Merchant Category Selection (MCC Mapping)*
+- Fraud Risk Score (0–100)
+- *Risk Classification (Low / Medium / High)
+- *Explainable AI (Reasons for prediction)*
+- *User-friendly Input Interface*
+- *Real-time Fraud Detection (Streamlit App)*
+- *Merchant Category Selection (MCC Mapping)*
 
