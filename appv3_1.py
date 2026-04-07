@@ -6,11 +6,10 @@ import json
 
 model = joblib.load("fraud_model.pkl")
 
-# Load MCC mapping
+
 with open("mcc_codes.json") as f:
     mcc_map = json.load(f)
 
-# Reverse mapping: category → code
 mcc_options = {v: int(k) for k, v in mcc_map.items()}
 mcc_list = list(mcc_options.keys())
 
