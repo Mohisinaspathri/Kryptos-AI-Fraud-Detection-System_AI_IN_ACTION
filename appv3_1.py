@@ -3,9 +3,7 @@ import pandas as pd
 import joblib
 import json
 
-# -------------------------
-# 🧠 LOAD MODEL
-# -------------------------
+
 model = joblib.load("fraud_model.pkl")
 
 # Load MCC mapping
@@ -16,17 +14,12 @@ with open("mcc_codes.json") as f:
 mcc_options = {v: int(k) for k, v in mcc_map.items()}
 mcc_list = list(mcc_options.keys())
 
-# -------------------------
-# 💳 BRANDING
-# -------------------------
+
 st.title("💳 Kryptos – AI Fraud Detection System")
 st.caption("⚡ Powered by AI | Real-time Fraud Risk Analysis")
 
 st.header("🔍 Transaction Analysis")
 
-# -------------------------
-# INPUT SECTION
-# -------------------------
 col1, col2 = st.columns(2)
 
 with col1:
@@ -76,9 +69,7 @@ with col2:
 
 st.markdown("---")
 
-# -------------------------
-# PREDICTION
-# -------------------------
+
 if st.button("🚀 Analyze Transaction"):
 
     dark_web_val = 1 if dark_web == "Yes" else 0
@@ -96,9 +87,7 @@ if st.button("🚀 Analyze Transaction"):
     prediction = 1 if prob > 0.7 else 0
     risk_score = prob * 100
 
-    # -------------------------
-    # RESULT DISPLAY
-    # -------------------------
+   
     st.subheader("📊 Kryptos Analysis Result")
 
     st.write(f"### 🔢 Risk Score: {risk_score:.2f}/100")
@@ -121,9 +110,6 @@ if st.button("🚀 Analyze Transaction"):
 
     st.markdown("---")
 
-    # -------------------------
-    # EXPLANATION
-    # -------------------------
     st.subheader("🧠 Why this decision?")
 
     reasons = []
@@ -154,9 +140,7 @@ if st.button("🚀 Analyze Transaction"):
 
     st.markdown("---")
 
-    # -------------------------
-    # TRANSACTION SUMMARY
-    # -------------------------
+    
     st.subheader("📄 Transaction Summary")
 
     st.write(f"💰 Amount: ₹{amount}")
